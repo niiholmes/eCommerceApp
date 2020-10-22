@@ -1,0 +1,33 @@
+.homeNav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background: bisque;
+}
+
+.home{
+    margin-left: 100px;
+}
+.navList{
+    display: flex;
+    list-style-type: none;
+    margin-right: 70px;
+}
+
+.store{
+    padding: 20px;
+    font-family: monospace;
+}
+
+.signup{
+    padding: 20px;
+    font-family: monospace;
+}
+
+.signin{
+    padding: 20px;
+    font-family: monospace;
+}

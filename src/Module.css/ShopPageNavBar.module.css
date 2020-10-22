@@ -1,0 +1,47 @@
+.shopNav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background: bisque;
+}
+
+.home{
+    margin-left: 100px;
+}
+.shopNavList{
+    display: flex;
+    list-style-type: none;
+    margin-right: 70px;
+}
+
+.shopKids{
+    padding: 20px;
+    font-family: monospace;
+}
+
+.shopWomen{
+    padding: 20px;
+    font-family: monospace;
+}
+
+.shopMen{
+    padding: 20px;
+    font-family: monospace;
+}
+
+.searchBox{
+    padding: 20px;
+}
+
+.box{
+    padding: 20px;
+}
+
+.cart{
+    padding: 20px;
+    font-family: monospace;
+}
+

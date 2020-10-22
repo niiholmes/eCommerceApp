@@ -1,0 +1,25 @@
+
+.try{
+    color: black;
+    margin-top: 20px;
+}
+
+.yeezyPrime{
+    margin-top: 77px;
+    margin-left: 20px;
+    
+}
+
+.yeezyPrime2{
+    margin-top: 77px;
+    margin-right: 20px;
+
+}
+
+.caroBar{
+    display: flex;
+    justify-content: space-around;
+    background: beige;
+
+}
+
