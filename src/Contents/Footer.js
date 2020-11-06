@@ -1,16 +1,9 @@
 import React from 'react'
-import axios from "axios"
 import style from '../Module.css/Footer.module.css'
 
 
 
 const Footer = () => {
-/*axios.get("http://localhost:4000/api/user/find/jayjay")
-.then( response => {
-   // console.log(response)
-    console.log(response.data.firstname)
-})
-*/
 
     return(
         <div>       

@@ -1,14 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Modal from 'react-modal'
-import {useHistory} from 'react-router-dom'
+import axios from 'axios'
 import style from '../Module.css/Modal.module.css'
 
 
 Modal.setAppElement('#root')
 
-const SignupModalPage = ({ firstname, surname, username, password, email}) => {
-    const history = useHistory()
-    
+const SignupModalPage = () => {
+
+    const [ user, setUser ] = useState({
+        firstname:"",
+        surname:"",
+        username:"",
+        email:"",
+        password:""
+    })
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        let result = await axios.post('http://localhost:4000/api/user/new', {
+            firstname: user.firstname, 
+            surname: user.surname, 
+            username: user.username, 
+            email: user.email, 
+            password: user.password
+        })
+
+        console.log(result)
+    }
   
     return(
         <div>
@@ -39,7 +60,8 @@ const SignupModalPage = ({ firstname, surname, username, password, email}) => {
                 type='text'
                 placeholder='firstname'
                 className={style.modalInput1}
-                value={firstname}
+                value={user.firstname}
+                onChange={ e => setUser({ ...user, firstname: e.target.value })}
                 />
 
 <br></br>
@@ -49,7 +71,8 @@ const SignupModalPage = ({ firstname, surname, username, password, email}) => {
                 type='text'
                 placeholder='surname'
                 className={style.modalInput1}
-                value={surname}
+                value={user.surname}
+                onChange={ e => setUser({ ...user, surname: e.target.value })}
                 />
 
 <br></br>
@@ -59,7 +82,8 @@ const SignupModalPage = ({ firstname, surname, username, password, email}) => {
                 type='text'
                 placeholder='username'
                 className={style.modalInput3}
-                value={username}
+                value={user.username}
+                onChange={ e => setUser({ ...user, username: e.target.value })}
                 />
             <br></br>
                 <br></br>
@@ -68,7 +92,8 @@ const SignupModalPage = ({ firstname, surname, username, password, email}) => {
                 type='email'
                 placeholder='email'
                 className={style.modalInput4}
-                value={email}
+                value={user.email}
+                onChange={ e => setUser({ ...user, email: e.target.value })}
                 />
 
 <br></br>
@@ -80,26 +105,27 @@ const SignupModalPage = ({ firstname, surname, username, password, email}) => {
                 type='password'
                 placeholder='password'
                 className={style.modalInput5}
-                value={password}
+                value={user.password}
+                onChange={ e => setUser({ ...user, password: e.target.value })}
                 />
 
                 <br></br>
                 <br></br>
 
 
-                <input
+                {/*<input
                 type='password'
                 placeholder='Confirm password'
                 className={style.modalInput6}
-                password={password}
-                />
+                password={user.password}
+                />*/}
 
 <br></br>
 <br></br>
                 <div>
                 <button 
                 type='submit' 
-                onClick = {()=>history.push('/shop')}
+                onClick = { (e)=>handleSubmit(e) }
                 className={style.modalButton}                
                 >
                     Create account
