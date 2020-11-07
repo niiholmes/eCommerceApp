@@ -23,9 +23,7 @@ const ShopPageNavBar = () => {
 
                 </div>
             </div>
-            <div className={style.pContainer}>
-                <h1 className={style.proclaim}>Treat your Family to the Lamborghini of Sneakers this Summer</h1>
-            </div>
+           
 
         </div>
     )

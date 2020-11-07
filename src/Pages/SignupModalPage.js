@@ -1,12 +1,15 @@
 import React, {useState} from 'react'
 import Modal from 'react-modal'
-import axios from 'axios'
+//import axios from 'axios'
+import {useHistory} from 'react-router-dom'
 import style from '../Module.css/Modal.module.css'
 
 
 Modal.setAppElement('#root')
 
 const SignupModalPage = () => {
+
+    const history = useHistory()
 
     const [ user, setUser ] = useState({
         firstname:"",
@@ -17,7 +20,7 @@ const SignupModalPage = () => {
     })
 
 
-    const handleSubmit = async (e) => {
+    /*const handleSubmit = async (e) => {
         e.preventDefault()
 
         let result = await axios.post('http://localhost:4000/api/user/new', {
@@ -30,7 +33,7 @@ const SignupModalPage = () => {
 
         console.log(result)
     }
-  
+  */
     return(
         <div>
 
@@ -45,10 +48,10 @@ const SignupModalPage = () => {
                     content:{
                         position: 'absolute',
                         background: 'antiquewhite',
-                        top: '100px',
-                        left: '500px',
-                        right: '500px',
-                        bottom: '100px',
+                        top: '70px',
+                        left: '300px',
+                        right: '300px',
+                        bottom: '70px',
                     }
                 }
             }
@@ -61,7 +64,7 @@ const SignupModalPage = () => {
                 placeholder='firstname'
                 className={style.modalInput1}
                 value={user.firstname}
-                onChange={ e => setUser({ ...user, firstname: e.target.value })}
+               // onChange={ /*e => setUser({ ...user, firstname: e.target.value })*/}
                 />
 
 <br></br>
@@ -72,7 +75,7 @@ const SignupModalPage = () => {
                 placeholder='surname'
                 className={style.modalInput1}
                 value={user.surname}
-                onChange={ e => setUser({ ...user, surname: e.target.value })}
+                //onChange={ /*e => setUser({ ...user, surname: e.target.value })*/}
                 />
 
 <br></br>
@@ -83,7 +86,7 @@ const SignupModalPage = () => {
                 placeholder='username'
                 className={style.modalInput3}
                 value={user.username}
-                onChange={ e => setUser({ ...user, username: e.target.value })}
+               // onChange={ /*e => setUser({ ...user, username: e.target.value })*/}
                 />
             <br></br>
                 <br></br>
@@ -93,7 +96,7 @@ const SignupModalPage = () => {
                 placeholder='email'
                 className={style.modalInput4}
                 value={user.email}
-                onChange={ e => setUser({ ...user, email: e.target.value })}
+                //onChange={ /*e => setUser({ ...user, email: e.target.value })*/}
                 />
 
 <br></br>
@@ -106,7 +109,7 @@ const SignupModalPage = () => {
                 placeholder='password'
                 className={style.modalInput5}
                 value={user.password}
-                onChange={ e => setUser({ ...user, password: e.target.value })}
+               // onChange={ /*e => setUser({ ...user, password: e.target.value })*/}
                 />
 
                 <br></br>
@@ -125,7 +128,7 @@ const SignupModalPage = () => {
                 <div>
                 <button 
                 type='submit' 
-                onClick = { (e)=>handleSubmit(e) }
+                onClick = { ()=>history.push('/shop')}
                 className={style.modalButton}                
                 >
                     Create account

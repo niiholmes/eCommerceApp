@@ -7,17 +7,17 @@ const NavBar = () => {
     return(
         <div>
             <div className={style.homeNav}>
-                <Link to='/'>
+                <Link to='/' className={style.homeLink}>
                 <h1  className={style.home}>YeezyCave</h1>
                 </Link>
                 
 
                 <div>
                     <ul className={style.navList}>
-                        <Link to='/create-an-account'>
+                        <Link to='/create-an-account' className={style.oldNew}>
                         <li className={style.signup}>CREATE AN ACCOUNT</li>
                         </Link>
-                        <Link to='/sign-in-your-details'>
+                        <Link to='/sign-in-your-details' className={style.oldNew}>
                         <li className={style.signin}>SIGN IN</li>
                         </Link>
 

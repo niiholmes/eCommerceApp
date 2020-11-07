@@ -24,8 +24,8 @@ const SigninModalPage = ({ username, password}) => {
                         position: 'absolute',
                         background: 'antiquewhite',
                         top: '100px',
-                        left: '500px',
-                        right: '500px',
+                        left: '300px',
+                        right: '300px',
                         bottom: '100px',
                     }
                 }
@@ -37,9 +37,7 @@ const SigninModalPage = ({ username, password}) => {
                 <br></br>
                 <br></br>
                 <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+             
                 <input
                 type='text'
                 placeholder='username'
