@@ -16,7 +16,9 @@ const ShopPageNavBar = () => {
                     <ul className={style.shopNavList}>
                         <li><input type='search' placeholder='search shoes' className={style.searchBox}></input></li>
                         <li><input type='submit' className={style.box}></input></li>
+                        <Link to ='/kart'>
                         <li className={style.cart}>Kart</li>
+                        </Link>
 
                     </ul>
                     
